@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Button } from './ui/moving-border';
+import Link from 'next/link'
 
 export const Hero: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -58,10 +59,12 @@ export const Hero: React.FC = () => {
                         </p>
                     </div>
                 </div>
-                <Button borderRadius="1000px" className="bg-black rounded-full gap-3 text-white">
-                    Get Started Now
-                    <FaArrowRight />
-                </Button>
+                <Link href="/loading" className="relative z-10">
+                    <Button borderRadius="1000px" className="bg-black rounded-full gap-3 text-white">
+                        Get Started Now
+                        <FaArrowRight />
+                    </Button>
+                </Link>
             </div>
         </div>
     );
